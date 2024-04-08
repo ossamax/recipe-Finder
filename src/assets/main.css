@@ -7,6 +7,7 @@
   padding: 0;
   font-weight: normal;
   transition: 0.3s ease-in-out;
+  font-family: "Kanit", sans-serif;
 }
 input {
   outline: none;
