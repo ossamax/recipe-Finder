@@ -14,7 +14,7 @@ input {
 }
 body {
   min-height: 100vh;
-  background-color: #f8f7f9;
-  color: #28455b;
+  background-color: rgb(255, 245, 231);
+  color: #101d27;
   font-family: "Kanit", sans-serif;
 }
