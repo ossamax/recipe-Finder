@@ -191,7 +191,7 @@ function debounce(func, delay) {
         </li>
       </ul>
       <div v-if="data.length == 0" class="empty_img">
-        <img src="/empty_search.svg" width="400" height="300" alt="empty" />
+        <img src="/empty_search.svg" class="img" alt="empty" />
       </div>
     </div>
   </main>
@@ -207,11 +207,17 @@ function debounce(func, delay) {
 p {
   color: rgb(149, 147, 167);
   font-weight: 300;
+  text-align: center;
 }
 .empty_img {
   display: flex;
   align-items: center;
   justify-content: center;
+  img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+  }
 }
 .search_header span {
   display: flex;
@@ -226,10 +232,13 @@ p {
   border-radius: 25px;
   display: flex;
   align-items: center;
-  width: 500px;
+  max-width: 500px;
   gap: 10px;
   border: 1px solid transparent;
   margin-top: 1rem;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
   &:hover {
     border-color: lightseagreen;
   }
@@ -255,6 +264,10 @@ p {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  @media screen and (max-width: 600px) {
+    width: 95%;
+    padding: 2rem 1rem;
+  }
 }
 main {
   min-height: 100vh;
@@ -294,6 +307,9 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   list-style: none;
   gap: 25px;
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   li {
     border-radius: 8px;
     position: relative;
